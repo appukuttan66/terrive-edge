@@ -1,0 +1,146 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	background: #fff;
+}
+h2 {
+	display: none;
+	margin-top: 4rem;
+	text-align: center;
+	color: #666;
+	font-size: 2rem;
+}
+h2.active {
+	display: block;
+}
+.blue {
+	color: #2965d2;
+}
+nav {
+	margin: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	position: relative;
+}
+.level-wrap {
+	display: flex;
+	flex-direction: column;
+	height: 4rem;
+	width: 4rem;
+	justify-content: center;
+	align-items: center;
+	background: #ccc;
+	color: #fff;
+	border-radius: 50%;
+}
+.level-wrap.active, .level-line.active {
+	background: cornflowerblue;
+	transition: background 1s ease-out;
+}
+.level-line {
+	height: 2px;
+	min-width: 2rem;
+	width: 10vw;
+	background: #ddd;
+	margin: 0 1rem;
+	transition: background 1s ease-out;
+}
+.lvl-1-tray, .lvl-2-tray {
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.lvl-2-tray {
+	flex-direction: column;
+}
+.card {
+	background: transparent;
+	box-shadow: 0 0 2rem #ccc;
+	width: 20rem;
+	height: 20rem;
+	border-radius: .5rem;
+	margin-left: 5%;
+	margin-bottom: 5%;
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.card:first-child {
+	margin-left: 0;
+}
+.card:hover {
+	background-color: cornflowerblue;
+	box-shadow: 0 0 5rem cornflowerblue;
+}
+.card[disabled] {
+	cursor: not-allowed;
+	opacity: .4;
+}
+.bg-images {
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23ccc" class="bi bi-images" viewBox="0 0 16 16"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/></svg>');
+}
+.bg-videos {
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23ccc" class="bi bi-film" viewBox="0 0 16 16"><path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z"/></svg>');
+}
+input[type="file"] {
+	position: relative;
+	width: 20rem;
+	overflow: hidden;
+	margin-bottom: 2rem;
+}
+input[type="file"]::file-selector-button {
+	background: cornflowerblue;
+	color: transparent;
+	border-radius: .25rem;
+	border: none;
+	outline: none;
+	height: 20rem;
+	width: 20rem;
+}
+input[type="file"]::file-selector-button {
+	background-position: center;
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23fff" class="bi bi-file-plus" viewBox="0 0 16 16"><path d="M8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z"/><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/></svg>');
+}
+input[type="file"]::file-selector-button:hover, input[type="file"].over::file-selector-button {
+	border: .25rem cornflowerblue dashed;
+	background-color: aliceblue;
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23ccc" class="bi bi-file-plus" viewBox="0 0 16 16"><path d="M8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z"/><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/></svg>');
+}
+button {
+	appearence: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	font-family: inherit;
+	font-size: 1.2rem;
+	font-weight: 400;
+	padding: .5rem 1rem;
+	border: cornflowerblue; solid 2px;
+	outline: none;
+	border-radius: 10rem;
+	background: cornflowerblue;
+	color: #fff;
+	margin: 0 1rem;
+	margin-bottom: 2rem;
+}
+.pre-grid {
+	height: 10rem;
+	margin: 0 1rem;
+	border-radius: .25rem;
+}
+@media(max-width: 46em) {
+	nav {
+		margin: 3rem 1rem;
+	}
+	.lvl-1-tray {
+		flex-direction: column;
+	}
+	.card {
+		width: 80%;
+		margin-left: 0;
+	}
+}

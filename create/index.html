@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width">
+	<title>Create | Terrive</title>
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/create.css">
+</head>
+<body>
+	<h2 class="active stp1"><span class="blue">Step <span class="lvl">1</span>:</span> Select a Type.</h2>
+	<h2 class="stp2"><span class="blue">Step <span class="lvl">2</span>:</span> Select Files.</h2>
+	<h2 class="stp3"><span class="blue">Step <span class="lvl">3</span>:</span> Almost Done!.</h2>
+
+	<nav>
+		<div class="level-wrap active">1</div>
+		<div class="level-line"></div>
+		<div class="level-wrap">2</div>
+		<div class="level-line"></div>
+		<div class="level-wrap">3</div>
+	</nav>
+	<main>
+		<div class="lvl-1-tray d-flex">
+			<div class="card bg-images" onclick="lvl2img('image')"></div>
+			<div class="card bg-videos" disabled></div>
+		</div>
+		<div class="lvl-2-tray d-none">
+			<input id="imgfile" type="file" accept="image/jpg,image/jpeg,image/png,image/webp,image/gif" multiple><div id="preview"></div>
+			<button onclick="lvl3()">Done</button>
+		</div>
+		<div class="lvl-3-tray d-none">Level 3</div>
+	</main>
+	<script type="text/javascript" src="../js/bridge.js"></script>
+	<script type="text/javascript" src="../js/create.js"></script>
+</body>
+</html>

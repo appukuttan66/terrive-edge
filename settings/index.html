@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Settings | Terrive</title>
+	<link rel="stylesheet" type="text/css" href="../css/settings.css">
+</head>
+<body>
+	<main>
+		<div class="entry">
+			<label for="ppic" class="img-up"><img id="pp" src="https://icons.getbootstrap.com/assets/icons/person-circle.svg"><img class="edit" src="../assets/icons/gear.svg"></label>
+			<input id="ppic" type="file" accept="image/*">
+		</div>
+		<h2>Profile</h2>
+		<div class="entry">
+			<textarea id="about" placeholder="About You"></textarea>
+		</div>
+		<div class="entry c">
+			<input id="website" type="text" placeholder="Website">
+			<input type="text" id="location" placeholder="Location">
+		</div>
+		<div class="entry"><button class="corn" onclick="save()">Save</button></div>
+		<br>
+		<h2>Advanced</h2>
+		<div class="entry">
+			<label for="rpc">RPC Node</label>
+			<select id="rpc">
+				<option value="https://api.hive.blog" selected>api.hive.blog</option>
+				<option value="https://api.deathwing.me">api.deathwing.me</option>
+				<option value="https://hived.emre.sh">hived.emre.sh</option>
+				<option value="https://api.openhive.network">api.openhive.network</option>
+				<option value="https://rpc.ausbit.dev">rpc.ausbit.dev</option>
+				<option value="https://anyx.io">anyx.io</option>
+				<option value="https://rpc.ecency.com">rpc.ecency.com</option>
+			</select>
+		</div>
+		<div class="entry">
+			<div id="node-btn" class="dropdown" for="drop" onclick="get()">Show Node Health</div>
+			<div class="entry" id="node-wrap">
+				<div id="nodes"></div>
+				<div class="peak-water">Powered by <a href="https://beacon.peakd.com" target="_blank" rel="noreferer">Peak Beacon</a></div>
+			</div>
+		</div>
+		<div class="entry">
+			<div class="switch">
+				<label for="nsfw">Show NSFW Posts</label>
+				<input type="checkbox" id="nsfw">
+			</div>
+		</div>
+		<div class="entry">
+			<label for="ih">Image Hoster</label>
+			<select id="ih" onchange="imghost(this)">
+				<option value="https://ipfs.infura.io:5001/api/v0/add" default>IPFS ( Infura )</option>
+				<option value="https://siasky.net/skynet/skyfile">Skynet ( SiaSky.Net )</option>
+			</select>
+		</div>
+		<div class="entry">
+			<button class="corn" onclick="done()">Go Back</button>
+			<button onclick="re()">Reset</button><button onclick="logout()">Logout</button>
+		</div>
+	</main>
+	<script type="text/javascript" src="../js/settings.js"></script>
+</body>
+</html>

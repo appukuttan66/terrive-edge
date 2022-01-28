@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Terrive</title>
+		<link rel="stylesheet" type="text/css" href="./css/template.css">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+		<link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="dns-prefetch" href="https://api.hive.blog">
+		<link rel="preconnect" href="https://api.hive.blog">
+		<link rel="dns-prefetch" href="https://images.ecency.com">
+		<link rel="preconnect" href="https://images.ecency.com">
+		<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+		<script type="text/javascript">
+			if (!localStorage.username) location.href = "./login"
+		</script>
+	</head>
+	<body>
+		<header>
+		  <h1><span class="fleur">Terrive</span></h1> <input type="text" placeholder="Search" onkeyup="search(this)">
+		  <a href="/notifications"><img src="https://icons.getbootstrap.com/assets/icons/bell.svg"><span id="unread">1</span></a>
+		</header>
+
+		<div class="search d-none">
+			<p>Accounts</p>
+			<div class="acc"></div>
+			<p>Tags</p>
+			<div class="tgs"></div>
+		</div>
+
+		<main>
+			<div class="post-tray">
+			</div>
+			<div class="side-tray">
+				<div>Hotest Communities</div>
+			</div>
+		</main>
+
+		<nav>
+		  <a href="/"><img class="active" src="./assets/icons/house.svg"></a>
+		  <a href="/topics"><img src="./assets/icons/compass.svg"></a>
+		  <a href="/create"><img src="./assets/icons/plus-circle.svg"></a>
+		  <a href="/settings"><img src="./assets/icons/gear.svg"></a>
+		  <a href="/profile"><img id="pp" class="active" src="https://images.ecency.com/webp/u/undefined/avatar/small"></a>
+		</nav>
+		<script type="text/javascript" src="./js/bridge.js" defer></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/dompurify@2.3.3/dist/purify.min.js" defer></script>
+		<script type="text/javascript" src="./js/main.js" defer></script>
+	</body>
+</html>

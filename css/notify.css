@@ -1,0 +1,103 @@
+html, body, main {
+	height: 100%;
+	width: 100%;
+	background: #fff;
+}
+nav {
+	position: fixed;
+	padding: 1rem;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	z-index: 99;
+	background: #fff;
+}
+nav span {
+	font-size: 1.75rem;
+}
+.notify-nav span {
+	font-size: 1.5rem;
+}
+nav img, .notify-tray img {
+	width: 2.25rem;
+  	height:  2.25rem;
+  	display: inline-block;
+  	margin-right: .5rem;
+}
+nav img {
+	vertical-align: -.25rem;
+}
+.notify-nav img {
+	vertical-align: -.5rem;
+}
+nav img:hover {
+	opacity: .6;
+}
+main {
+	padding-top: 10rem;
+}
+.notify-nav {
+	margin-left: auto;
+}
+.notify-nav span {
+	margin: 0 .5rem;
+	color: #666;
+	cursor: pointer;
+}
+.notify-nav .active span, .notify-nav span:hover span {
+	color: #000;
+}
+.notify-nav img {
+	filter: invert(.4);
+}
+.notify-nav .active img, .notify-nav span:hover img, .notify-nav img:hover {
+	filter: invert(0);
+}
+.notify-tray a, .notify-tray p {
+	font-size: 1.5rem;
+}
+.notify-tray {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	justify-content: center;
+	align-items: center;
+}
+.notify-tray a {
+	color: #000;
+	padding: 1rem;
+	margin: 1rem;
+	box-shadow: 0 0 2rem #ccc;
+	text-decoration: none;
+	border-radius: .5rem;
+	cursor: pointer;
+}
+.notify-tray a:hover, .teal a {
+	box-shadow: 0 0 2rem #ccc;
+	background: cornflowerblue;
+	color: #fff;
+}
+.teal a:hover {
+	opacity: .8;
+}
+.placeholder {
+	width: 6rem !important;
+	height: 6rem !important;
+	filter: invert(.4);
+}
+.notify-tray .placeholder p {
+	color: #666;
+}
+.notify-tray a img {
+	vertical-align: -.65rem;
+	border-radius: 50%;
+}
+@media (max-width: 42em) {
+	.notify-nav span span {
+		display: none;
+	}
+}

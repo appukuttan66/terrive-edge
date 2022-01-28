@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>A Cool Post on Terrive</title>
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/view.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="https://api.hive.blog">
+	<link rel="preconnect" href="https://api.hive.blog">
+	<link rel="preconnect" href="https://cdn.jsdelivr.com">
+	<link rel="dns-prefetch" href="https://images.ecency.com">
+	<link rel="preconnect" href="https://images.ecency.com">
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="vw-wrap d-none" onclick="popHide(event,this)">
+		<span class="vw">
+			<span id="vw-perc">100%</span>
+			<input type="range" id="votew" oninput="perc(this)" value="100">
+			<img class="bi" src="../assets/icons/heart-fill.svg" onclick="voting()">
+		</span>
+	</div>
+	<div class="share-wrap d-none" onclick="popHide(event,this)">
+		<div class="share-tray">
+			<a id="whatsapp" target="_blank" rel="noreferer"><img class="ic" src="../assets/icons/whatsapp.svg"> Whatsapp</a>
+			<a id="reddit" target="_blank" rel="noreferer"><img class="ic" src="../assets/icons/reddit.svg"> Reddit</a>
+			<a id="twitter" target="_blank" rel="noreferer"><img class="ic" src="../assets/icons/twitter.svg"> Twitter</a>
+		</div>
+	</div>
+	<div class="chats-tray d-none">
+		<div class="chat-nav"><img id="close" src="../assets/icons/x-lg.svg"><img src="../assets/icons/arrow-clockwise.svg"></div>
+		<iframe id="chats" src="../chats/"></iframe>
+	</div>
+	<main>
+		<div class="post-head">
+			<a href="../">Terrive</a>
+			<a href="../notifications"><img src="../assets/icons/bell.svg"></a>	
+		</div>
+		<div class="post-img-wrap">
+
+			<button class="next" onclick="next()">
+				<span class="bi-next"></span>
+			</button>
+			<button class="prev" onclick="prev()">
+				<span class="bi-prev"></span>
+			</button>
+		</div>
+		<div class="progress">
+			<div id="step" class="thumb"></div>
+		</div>
+		<div class="post-nav">
+			<img src="../assets/icons/heart-fill.svg" onclick="voteView()" class="like">
+			<img id="chat-button" src="../assets/icons/chat-fill.svg">
+			<img id="share" src="../assets/icons/cursor-fill.svg" onclick="q('.share-wrap').classList.replace('d-none','d-flex')">
+			<span class="lk-wrap in"><span class="lks">0</span> likes</span>
+			<span class="pay-wrap in"><span class="pay">0.00</span> payouts</span>
+			<img src="../assets/icons/three-dots.svg">
+		</div>
+		<a class="user" href="#"><img class="pp" src="https://images.ecency.com/webp/u/undefined/avatar/small"><span class="pa"></span></a>
+		<div class="lk-wrap"><span class="lks">0</span> likes</div>
+		<div class="pay-wrap"><span class="pay">0.00</span> payouts</div>
+		<div class="post-body" onclick="this.classList.toggle('more')"></div>
+		<div class="post-tags"></div>
+		<div class="date">Now</div>
+		<div id="repl" onclick="this.classList.toggle('over')"></div>
+		<p class="n">More from <span class="b pa">user</span></p>
+		<div class="img-tray">
+		</div>
+	</main>
+
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/dompurify@2.3.3/dist/purify.min.js" defer></script>
+	<script type="text/javascript" src="../js/bridge.js" defer></script>
+	<script type="text/javascript" src="../js/view.js" defer></script>
+</body>
+</html>

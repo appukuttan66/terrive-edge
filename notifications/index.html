@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Notifications | Terrive</title>
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/notify.css">
+</head>
+<body>
+	<nav>
+		<a href="/"><img class="back" src="../assets/icons/arrow-left-short.svg"></a> <span>Back</span>
+		<span class="notify-nav">
+			<span class="un active" onclick="set(); this.classList.add('active'); q('.all').classList.remove('active')">
+				<img src="https://icons.getbootstrap.com/assets/icons/eye-slash.svg"><span>Unread</span>
+			</span>
+
+			<span class="all">
+				<img src="https://icons.getbootstrap.com/assets/icons/eye.svg"><span>All</span>
+			</span>
+
+			<span id="mark">
+				<img src="https://icons.getbootstrap.com/assets/icons/check2-all.svg"><span>Mark as read</span>
+			</span>
+		</span>
+	</nav>
+	<main>
+		<div class="notify-tray">
+			<img class="placeholder" src="https://icons.getbootstrap.com/assets/icons/check2-all.svg">
+			<p>All caught up !</p>
+		</div>
+	</main>
+	<script type="text/javascript" src="../js/bridge.js" defer></script>
+	<script type="text/javascript" src="../js/notify.js" defer></script>
+</body>
+</html>

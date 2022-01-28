@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<script type="text/javascript">
+		localStorage.username&&(location.href="./");
+	</script>
+</head>
+<body>
+	<div class="place">
+		<img src="../assets/images/unlock.svg">
+	</div>
+	<div class="card">
+		<h1>Login to Terrive</h1>
+		<p>Decentralized Photo and Video Sharing Platform powered by <a target="_blank" rel="noreferer" href="https://hive.io">Hive</a>, <a target="_blank" rel="noreferer" href="https://ipfs.io">IPFS</a> and <a target="_blank" rel="noreferer" href="https://siasky.net">Skynet.</a></p>
+		<button onclick="check()" class="dark"><img src="https://raw.githubusercontent.com/stoodkev/hive-keychain/master/images/keychain_logo.png"></button>
+		<hr>
+		<button class="light" onclick="hivesigner()"><img src="https://peakd.com/static/img/hivesigner.6958efa0.svg"></button>
+		<div class="footer">
+			<div>
+				<a href="https://terrive.one/about" target="_blank" rel="noreferer">About</a>
+				<a href="https://matrix.to/#/#terrive:matrix.org" target="_blank" rel="noreferer">Contact</a>
+				<a rel="noreferer" target="_blank" href="https://hivesigner.com/sign/transfer?to=terrive&amount=1HBD">Donate</a>
+			</div>
+			<div>
+				<span>Topics </span>
+				<a href="../topics/?q=photography">Photography</a>
+				<a href="../topics/?q=nature">Nature</a>
+			</div>
+			<div class="appu">
+				<span>Made with ❤️ by <a href="../profile/?q=appukuttan66">appukuttan66</a></span>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/login.js" defer></script>
+</body>
+</html>

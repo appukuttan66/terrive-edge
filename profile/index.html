@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="preconnect" href="https://api.hive.blog">
+	<link rel="preconnect" href="https://images.ecency.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+	<link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
+	<title>See this Profile on Terrive</title>
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/profile.css">
+</head>
+<body>
+	<nav class="up">
+		<h1><a href="../">Terrive</a></h1>
+		<a class="ms-auto" href="../create"><img class="bi" src="../assets/icons/plus-circle.svg"></a>
+		<a href="../settings"><img class="bi" src="../assets/icons/gear.svg"></a>
+		<a href="../notifications"><img class="bi" src="../assets/icons/bell.svg"></a>
+	</nav>
+	<div class="top">
+		<img class="ppic" src="https://images.ecency.com/webp/u/null/avatar/medium" width="128" height="128">
+		<span class="about-tray">
+			<h1 class="pa"></h1>
+			<button id="follow" onclick="follow()">Follow</button>
+			<p class="about"></p>
+			<span class="location"></span>
+			<a class="website" target="_blank" rel="noreferer" href="#"></a>
+		</span>
+		<span class="follow-tray">
+			<div><b id="post-count"></b> Posts</div>
+			<div><b id="followers"></b> Followers</div>
+			<div><b id="following"></b> Following</div>
+		</span>
+	</div>
+	<nav class="mid">
+		<div class="nav-item blog active" onclick="blog()"><img src="https://icons.getbootstrap.com/assets/icons/grid-3x3.svg"></div>
+		<div class="nav-item posts" onclick="posts()"><img src="https://icons.getbootstrap.com/assets/icons/image.svg"></div>
+		<div class="nav-item info" onclick="info()"><img src="https://icons.getbootstrap.com/assets/icons/people.svg"></div>
+	</nav>
+	<div class="img-tray"></div>
+
+	<script type="text/javascript" src="../js/bridge.js" defer></script>
+	<script type="text/javascript" src="../js/profile.js" defer></script>
+</body>
+</html>
